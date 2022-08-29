@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart.js';
+import { CartWidget } from './CartWidget';
 
 
 
@@ -28,7 +28,7 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav>         
-            <Nav.Link href="#"><ShoppingCartIcon color="primary"/></Nav.Link>
+            <Nav.Link href="#"><CartWidget/></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,15 +1,21 @@
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import  ItemListContainer from "./components/ItemListContainer"
+import { Title } from "./components/Title";
 
-let titulo = "DRAGONBALL STORE" ;
+
 
 const App = ()  => {
+  
+     const name = "Aqui van los productos"  
+
     return (
-        <>
+        <div>
         <NavBar />
-        <h1>{titulo} </h1>
+        <Title />
+        <ItemListContainer name = {name} />
         <Footer />
-        </>
+        </div>
     )
 }
 

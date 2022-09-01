@@ -37,18 +37,17 @@
   }
 }
 
-.footer {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: black;
-  color: rgb(255, 255, 255);
-  
+.shop-button{
+  margin-left: auto;
+  color: #4091e2;
+  text-decoration: none;
+  border: 2px solid;
+  padding: 8px 24px;
+  border-radius: 20px;
+  transition: .4s linear;  
 }
 
-.titulo {
-  text-align: center;
-  color: rgb(8, 8, 131);
-  text-decoration: underline;
-  text-transform: uppercase;
-  margin-top: 2rem;
+.shop-button:hover{
+  color:white;
+  background:#005af6;
 }

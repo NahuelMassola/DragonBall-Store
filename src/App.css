@@ -83,3 +83,13 @@
 .gradient-btn:hover::after {
   filter: blur(15px);
 }
+
+.img-card {
+  width: 250px;
+  height: 250px;
+}
+
+.img--card {
+  align-items: center;
+}
+

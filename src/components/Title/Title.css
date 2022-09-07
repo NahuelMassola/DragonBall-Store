@@ -1,7 +1,17 @@
 .titulo {
     text-align: center;
-    color: rgb(8, 8, 131);
-    text-decoration: underline;
     text-transform: uppercase;
-    margin-top: 2rem;
+    padding-top: 3rem;
+    color: #fff;
+    height: 30vh;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px magenta,
+        0 0 82px blue,
+        0 0 92px magenta,
+        0 0 102px magenta,
+        0 0 151px magenta;
+        font-size: 5rem !important;
   }

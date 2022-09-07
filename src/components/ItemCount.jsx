@@ -31,15 +31,15 @@ const ItemCount = (props) => {
             <div className="row">
                 <div className="col-md-6 offset-md-3 d-flex ">
                     <input type="button" className="btn btn-secondary" value="-" onChange={()=>{}} onClick={restar}/>
-                    <input type="text" className="form-control text-center" onChange={()=>{}} value={count}/>
+                    <input type="text" className="form-control card--title text-center" onChange={()=>{}}  value={count}/>
                     <input type="button" className="btn btn-secondary" value="+" onChange={()=>{}} onClick={sumar}/>
                 </div>
             </div>
             <div className="text-center py-3">
                     <input type="button" className="add-button text-center" value="Agregar" onChange={()=>{}} onClick={() => {agregarProductos()}} ></input>
             </div>
-                <div className="text-center"> Stock: {stock}</div>
-                <div className="text-center"> Cantidad Productos Agregados: {onAdd}</div>
+                <div className="card-title text-center"> <strong>Stock: {stock}</strong></div>
+                <div className="card-title text-center"> <strong>Cantidad Productos Agregados: {onAdd}</strong></div>
         </div>
         
     )
@@ -48,3 +48,4 @@ export default ItemCount ;
 
 
 
+<input></input>

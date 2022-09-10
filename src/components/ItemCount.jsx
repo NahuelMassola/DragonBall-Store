@@ -44,6 +44,12 @@ const ItemCount = (props) => {
         else if  (count <= stock ) {
             setStock (stock - count);
             setonAdd (onAdd + count);
+            Swal.fire(
+                'Agregaste un Producto!',
+                '',
+                'success'
+            )
+
         }
     } ;
 

@@ -1,5 +1,4 @@
 import React from "react";
-/* import ItemCount from "./ItemCount" */
 
 const Item = (props) => {
     return (
@@ -13,7 +12,6 @@ const Item = (props) => {
                         <button className="box-button text-center my-4">${props.precio}</button>
                         <button className="box-button text-center my-4">Detalles</button>
                     </div>
-             {/* <ItemCount stock={5} initial={1} onAdd={0}/>  */}
                 </div>
             </div> 
     );

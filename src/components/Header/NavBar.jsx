@@ -6,29 +6,28 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./NavBar.css";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from './CartWidget';
-/* import { Link } from 'react-router-dom'; */
-
 
 
 const NavBar = () => {
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar  bg="dark" expand="lg md sm" variant="dark">
       <Container>
-        <Navbar.Brand href="#Home">DragonBall Store</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-              <Nav.Link className='navbar' to={"/Home"}>Home</Nav.Link>
-            <Nav.Link className='navbar' to={"/Contact"}>Contact</Nav.Link>
-            <Nav.Link>
-              <NavDropdown title="Categories" id="collasible-nav-dropdown"><NavDropdown/>
-                <NavDropdown.Item to={"/FiguresZ"}>Figures Z</NavDropdown.Item>
-                <NavDropdown.Item to={"/FiguresS"}>Figures Super</NavDropdown.Item>
-                <NavDropdown.Divider />
-              </NavDropdown>
-            </Nav.Link>
+        <Navbar.Brand href="#home">DragonBall Store</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto ">
+          <Nav.Link className='navbar' href="#home">Home</Nav.Link>
+          <Nav.Link className='navbar' href="#contact">Contact</Nav.Link>
+            <NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Figures Z</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Figures Super
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+            </NavDropdown>
           </Nav>
-          <Nav>         
+          <Nav>
             <Nav.Link href="#"><CartWidget/></Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -39,5 +38,3 @@ const NavBar = () => {
 
 
 export default NavBar;
-
- 

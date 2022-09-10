@@ -1,42 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+/* Boton Agregar Detail */
 .add-button{
   margin-left: auto;
   color: #ffffff;
@@ -53,14 +15,18 @@
   background:#2f69cc;
 }
 
+/* Fin Boton Agregar Detail */
+
+/* Cards Home */
+
 .img-card {
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
 }
 
 .img--card {
   width: 320px !important;
-  height: 550px;
+  height: 400px;
   margin: 40px 20px 40px 20px;
   padding: 3px;
   background: transparent !important;
@@ -71,6 +37,26 @@
   inset 0 0 5px #fff , 0 0 5px #fff,
   inset 0 0 20px #0ff , 0 0 20px #0ff;
 }
+
+/* fin Cards Home */
+
+/* Cards Details */
+
+.img--cardetail {
+  width: 250px !important;
+  height: 330px;
+  margin: 40px 20px 40px 20px;
+  padding: 3px;
+  background: transparent !important;
+  border: 1px solid #fff !important;
+  border-radius: 20px !important;
+  color: #fff;   
+  box-shadow: 
+  inset 0 0 5px #fff , 0 0 5px #fff,
+  inset 0 0 20px #0ff , 0 0 20px #0ff;
+}
+
+/* FIn Cards Details */
 
 .fondo {
   background-color: #b1caf5;
@@ -83,3 +69,37 @@
 .card--title {
   background: transparent !important;
 }
+
+/* Botones Card Home */
+
+.box-button {
+  background: transparent;
+  align-content: center;
+  color: white;
+  display: inline-block;
+  height: 50px;
+  text-align: center;
+  transition: 0.5s;
+  padding: 0 20px;
+  cursor: pointer;
+  -webkit-transition:0.5s;
+  border: 2px solid white;
+  border-radius: 20px;
+  box-shadow: 
+  inset 0 0 2px #fff , 0 0 2px #fff,
+  inset 0 0 10px #0ff , 0 0 10px #0ff;
+  }
+
+  .box-button:hover {
+    border: 2px solid white;
+    border-radius: 20px;
+    color: #FFF;
+    transform: scale(1.02);
+    transition: 0.5s;
+    box-shadow: 
+  inset 0 0 5px #fff , 0 0 5px #fff,
+  inset 0 0 15px magenta, 0 0 15px magenta;
+  }
+
+  /* Fin Botones Card Home */
+

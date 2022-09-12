@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import productos  from "../productos.json"
+import { productosss } from "../productosss";
 
 
 const ItemDetailContainer = () => {
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const getProducto = new Promise((resolve) => {
             setTimeout(() => {
-                const producto = productos.find((prod) => prod.id === 1)
+                const producto = productosss.find((prod) => prod.id === 1)
             resolve(producto);
             } , 2000);
         }); 

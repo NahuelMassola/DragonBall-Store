@@ -1,10 +1,10 @@
-[{
+export const productosss = [{
     "id": 1 , 
     "nombre": "Goku" , 
     "imagen" :"goku.png" , 
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 15000 , 
-    "categoria": "z"
+    "categoria": "figuresZ"
 },
 {   
     "id": 2 ,  
@@ -12,7 +12,7 @@
     "imagen" : "Veguetta.png" ,
     "descripcion":" Figura de acción Dragon Ball Z" , 
     "precio": 12500, 
-    "categoria": "z"
+    "categoria": "figuresZ"
 },
 {
     "id": 3 , 
@@ -20,7 +20,7 @@
     "imagen" : "Bills2.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 11500, 
-    "categoria": "super"
+    "categoria": "figuresSuper"
 },
 {
     "id": 4 , 
@@ -28,7 +28,7 @@
     "imagen" : "VeguettaBlue.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio":14000 ,
-    "categoria": "super"
+    "categoria": "figuresSuper"
 },
 {
     "id": 5 , 
@@ -36,7 +36,7 @@
     "imagen" : "GokuRose1.png" ,
     "descripcion": "Figura de acción Dragon Ball Super", 
     "precio": 13500, 
-    "categoria": "super"
+    "categoria":"figuresSuper"
 },
 {
     "id": 6 ,
@@ -44,7 +44,7 @@
     "imagen" : "GokuSS4.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 16000, 
-    "categoria": "z"
+    "categoria": "figuresZ"
 },
 {
     "id": 7 ,
@@ -52,7 +52,7 @@
     "imagen" : "whis.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 14500, 
-    "categoria": "super"
+    "categoria": "figuresSuper"
 },
 {
     "id": 8 ,
@@ -60,7 +60,7 @@
     "imagen" : "giren.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 17000, 
-    "categoria": "super"
+    "categoria":"figuresSuper"
 },
 {
     "id": 9 ,
@@ -68,5 +68,5 @@
     "imagen" : "kefla.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 18500, 
-    "categoria": "super"
+    "categoria": "figuresSuper"
 }]

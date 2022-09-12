@@ -1,34 +1,35 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
+import "./NavBar.css";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import "./NavBar.css";
+import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from './CartWidget';
+import { Link } from 'react-router-dom';
+
+
 
 
 const NavBar = () => {
 
   return (
-    <Navbar  bg="dark" expand="lg md sm" variant="dark">
+    <Navbar bg="dark" expand="lg md sm" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">DragonBall Store</Navbar.Brand>
+        <Link className='navbar m-2' to="/" > DragonBall Store</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto ">
-          <Nav.Link className='navbar' href="#home">Home</Nav.Link>
-          <Nav.Link className='navbar' href="#contact">Contact</Nav.Link>
+          <Nav className="me-auto">
+          <Link className='navbar m-2' to="/" >Home</Link>
+          <Link className='navbar m-2' to="/contact">Contact</Link>
             <NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Figures Z</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Figures Super
-              </NavDropdown.Item>
+              <Link className='d-flex text-dark' to="/categories/figuresZ">Figures Z</Link>
+              <Link className=' text-dark' to="/categories/figuresSuper">Figures Super</Link>
               <NavDropdown.Divider />
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#"><CartWidget/></Nav.Link>
+            <Link to="/cart"><CartWidget/></Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,35 +1,42 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList"
-import productos from "../productos.json"
+/* import productos from "../productos.json" */
+import { useParams } from "react-router-dom";
+import { productosss } from "../productosss";
+
 
 
 
 const ItemListContainer = () => {
-  const [items , setItems] = useState([]);
+  const [items , setItems] = useState([]); 
 
+  const {categoriesId} = useParams();
 
   useEffect(() => {
-    fetch("./productos.json")
+    /* fetch("./productos.json")
     .then((respuesta) => respuesta.json())
     .then((data) => {
       setItems(data); 
-    });   
+    }); */   
 
 const getProductos = new Promise((resolve) => {
   setTimeout(() => {
-    resolve(productos);
+    resolve(productosss);
   } , 2000);
 }); 
 
-    getProductos.then((respuesta) => {
-      setItems(respuesta);  
-    })
-    .catch((error) => {
+    if (categoriesId) {
+      getProductos.then((respuesta) => {
+        setItems(respuesta.filter(productosss => productosss.categoria === categoriesId));
+      })
+    } else {
+      getProductos.then((respuesta) => {
+        setItems(respuesta);  
+      })
       
-      console.log(error);
-    });
-  
-  }, []) ;
+    }
+
+  }, [categoriesId]) ;
 
 
   return (
@@ -40,3 +47,8 @@ const getProductos = new Promise((resolve) => {
 };
 
 export default ItemListContainer ;
+
+/* .catch((error) => {
+      
+  console.log(error);
+}); */

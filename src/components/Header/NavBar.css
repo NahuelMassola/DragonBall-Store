@@ -3,3 +3,7 @@
     text-decoration: none;
     list-style: none;
 }
+
+.navbar:hover {
+    color: rgb(0, 255, 255);
+}

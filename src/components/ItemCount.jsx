@@ -69,7 +69,7 @@ const ItemCount = (props) => {
                     <input type="button" className="add-button text-center" value="Agregar" onChange={()=>{}} onClick={() => {agregarProductos()}} ></input>
             </div>
                 <div className="text-center"> <strong>Stock: {stock}</strong></div>
-                <div className="text-center"> <strong>Cantidad Productos Agregados: {onAdd}</strong></div>
+                <div className="text-center pb-5"> <strong>Cantidad Productos Agregados: {onAdd}</strong></div>
         </div>
     )
 }

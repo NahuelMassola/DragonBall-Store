@@ -69,4 +69,27 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 18500, 
     "categoria": "figuresSuper"
+},
+{   "id": "10" ,
+    "nombre": "Freezer" , 
+    "imagen" : "freezer.png" , 
+    "descripcion":"Figura de acción Dragon Ball Z" , 
+    "precio": 16500, 
+    "categoria": "figuresZ"
+},
+{
+    "id": "11" ,
+    "nombre": "Gohan" , 
+    "imagen" : "gohan.png" , 
+    "descripcion":"Figura de acción Dragon Ball Z" , 
+    "precio": 13500, 
+    "categoria": "figuresZ"
+},
+{
+    "id": "12" ,
+    "nombre": "Magin Boo" , 
+    "imagen" : "magin boo.png" , 
+    "descripcion":"Figura de acción Dragon Ball Z" , 
+    "precio": 18500, 
+    "categoria": "figuresZ"
 }]

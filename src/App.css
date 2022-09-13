@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Boton Agregar Detail */
 .add-button{
   margin-left: auto;
@@ -26,8 +30,7 @@
 
 .img--card {
   width: 320px;
-  height: 400px;
-  margin: 40px 10px 40px 10px;
+  margin: 40px auto;
   padding: 3px;
   background: transparent !important;
   border: 1px solid #fff !important;
@@ -48,12 +51,7 @@
   margin: 40px 20px 40px 20px;
   padding: 3px;
   background: transparent !important;
-  border: 1px solid #fff !important;
-  border-radius: 20px !important;
-  color: #fff; 
-  box-shadow: 
-  inset 0 0 5px #fff , 0 0 5px #fff,
-  inset 0 0 20px #0ff , 0 0 20px #0ff;
+  
 }
 
 /* FIn Cards Details */
@@ -106,3 +104,27 @@
     text-decoration: none;
 } 
 
+.outer {
+  position: relative;
+  width: 85%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 
+  inset 0 0 10px #fff , 0 0 10px #fff,
+  inset 0 0 25px #0ff , 0 0 25px #0ff;
+}
+
+@media (max-width: 605px){
+  .img--card {
+    width: auto;
+  }
+}
+
+@media (min-width: 606px) and (max-width: 991px){
+  .titulo {
+    font-size: 3rem;
+  }
+  .img--card {
+    width: auto;
+  }
+}

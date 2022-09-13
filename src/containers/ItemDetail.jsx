@@ -5,18 +5,18 @@ import ItemCount from "../components/ItemCount";
 const ItemDetail = ({item})=> {
 
     return (
-        <div className="container vh-100">
-            <div className="row">
+        <div className="container d-flex justify-content-center py-5">
+            <div className="row outer">
                 <div className="col-md-6 col-12 text-center">
                     <img className="img--cardetail" src={"/ImagesCard/" + item.imagen} alt={item.nombre} />
                 </div>
                 <div className="col-md-6 col-12">
                     <div className="row">
-                        <h2 className="card-detail text-center pt-5">{item.nombre}  Figure</h2>
+                        <h2 className="card-detail text-center pt-5"><strong>{item.nombre} Figure</strong></h2>
                     </div>
                     <div className="row">
                         <div className="col-md-12 col-12 text-center">
-                        <h4>{item.descripcion}</h4>
+                        <p>{item.descripcion}</p>
                         </div>
                     </div>
                     <div className="row text-center">

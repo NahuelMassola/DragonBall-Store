@@ -1,9 +1,8 @@
 import React from "react";
 import Item from "../components/Item"
 
-
+//Componente Lista del Producto //
 const ItemList = ({items})=> {
-    
     return (
         <div className="container">
             <div className="row">

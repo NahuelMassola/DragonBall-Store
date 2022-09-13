@@ -8,8 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from './CartWidget';
 import { Link } from 'react-router-dom';
 
-
-
+// Componente NavBar //
 
 const NavBar = () => {
 
@@ -23,9 +22,8 @@ const NavBar = () => {
           <Link className='navbar m-2' to="/" >Home</Link>
           <Link className='navbar m-2' to="/contact">Contact</Link>
             <NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
-              <Link className='d-flex text-dark' to="/categories/figuresZ">Figures Z</Link>
-              <Link className=' text-dark' to="/categories/figuresSuper">Figures Super</Link>
-              <NavDropdown.Divider />
+              <Link className='link d-flex' to="/category/figuresZ"><strong>Figures Z</strong></Link>
+              <Link className='link' to="/category/figuresSuper"><strong>Figures Super</strong></Link>
             </NavDropdown>
           </Nav>
           <Nav>
@@ -36,6 +34,5 @@ const NavBar = () => {
     </Navbar>
   );
 }
-
 
 export default NavBar;

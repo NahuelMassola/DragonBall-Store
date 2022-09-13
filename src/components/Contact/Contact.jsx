@@ -1,5 +1,7 @@
 import React from "react";
 
+// Componente Contact //
+
 const Contact = () => {
     return (
         <div>

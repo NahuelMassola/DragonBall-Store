@@ -8,4 +8,22 @@
     color: rgb(0, 255, 255);
 }
 
+.dropdown-menu {
+    background-color: rgba(248, 245, 245, 0.338);
+}
 
+.link {
+    color:  black;
+}
+
+.link:hover {
+    color: rgb(0, 0, 0);
+}
+
+.dropdown-toggle {
+    color: rgba(248, 245, 245, 0.338);
+}
+
+.dropdown-toggle:hover {
+    color: rgb(0, 255, 255);
+}

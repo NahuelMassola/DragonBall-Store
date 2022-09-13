@@ -1,10 +1,10 @@
 import React from "react";
 import ItemCount from "../components/ItemCount";
 
+//Componente Detalle del Producto //
 const ItemDetail = ({item})=> {
 
     return (
-
         <div className="container vh-100">
             <div className="row">
                 <div className="col-md-6 col-12 text-center">

@@ -2,12 +2,14 @@ import React from "react";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
+// Componente Contador //
 
 const ItemCount = (props) => {
     const [count, setCount] = useState(props.initial);
     const [stock , setStock] = useState (props.stock)
     const [onAdd , setonAdd] = useState (props.onAdd)
 
+    // funcion sumar contador // 
     const sumar =  () => {
         if  (count < stock) {
             setCount(count +1) ;
@@ -20,6 +22,7 @@ const ItemCount = (props) => {
         }
     }
 
+    // funcion restar contador //
     const restar = () => {
         if (count > 1 ) {
             setCount(count -1 );
@@ -32,6 +35,7 @@ const ItemCount = (props) => {
         }
     }
 
+    // funcion Agregar Productos //
     const agregarProductos = () => {
         if (stock===0) {
             Swal.fire(
@@ -49,7 +53,6 @@ const ItemCount = (props) => {
                 '',
                 'success'
             )
-
         }
     } ;
 
@@ -68,9 +71,7 @@ const ItemCount = (props) => {
                 <div className="text-center"> <strong>Stock: {stock}</strong></div>
                 <div className="text-center"> <strong>Cantidad Productos Agregados: {onAdd}</strong></div>
         </div>
-        
     )
 }
-
 
 export default ItemCount;

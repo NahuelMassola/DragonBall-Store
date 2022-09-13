@@ -3,28 +3,21 @@ import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
 import {  productosss } from "../mock/productosss";
 
+// Componente Contenedor de Lista del producto //
 const ItemListContainer = () => {
   const [items , setItems] = useState([]); 
-  const {categoriesId} = useParams();
+  const {id} = useParams();
 
   useEffect(() => {
-
-    fetch("./productos.json")
-    .then((respuesta) => respuesta.json())
-    .then((data) => {
-      setItems(data); 
-      console.log(data);
-    });   
-
     const getItem = new Promise((resolve) => {
       setTimeout(() => {
       resolve(productosss);
-    }, 0);
+    }, 1000);
   }); 
 
-    if (categoriesId) {
+    if (id) {
       getItem.then((respuesta) => {
-        setItems(respuesta.filter(productosss => productosss.categoria === categoriesId));
+        setItems(respuesta.filter(productosss => productosss.categoria === id));
       })
     } else {
       getItem.then((respuesta) => {
@@ -33,10 +26,8 @@ const ItemListContainer = () => {
       .catch ((error) => {
         console.log(error);
       })
-      
     }
-
-  }, [categoriesId]) ;
+  }, [id]) ;
 
   return (
     <div>

@@ -1,54 +1,47 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList"
-/* import productos from "../productos.json" */
 import { useParams } from "react-router-dom";
-import { productosss } from "../productosss";
-
-
-
+import {  productosss } from "../mock/productosss";
 
 const ItemListContainer = () => {
   const [items , setItems] = useState([]); 
-
   const {categoriesId} = useParams();
 
   useEffect(() => {
-    /* fetch("./productos.json")
+
+    fetch("./productos.json")
     .then((respuesta) => respuesta.json())
     .then((data) => {
       setItems(data); 
-    }); */   
+      console.log(data);
+    });   
 
-const getProductos = new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(productosss);
-  } , 2000);
-}); 
+    const getItem = new Promise((resolve) => {
+      setTimeout(() => {
+      resolve(productosss);
+    }, 0);
+  }); 
 
     if (categoriesId) {
-      getProductos.then((respuesta) => {
+      getItem.then((respuesta) => {
         setItems(respuesta.filter(productosss => productosss.categoria === categoriesId));
       })
     } else {
-      getProductos.then((respuesta) => {
+      getItem.then((respuesta) => {
         setItems(respuesta);  
+      })
+      .catch ((error) => {
+        console.log(error);
       })
       
     }
 
   }, [categoriesId]) ;
 
-
   return (
-      
     <div>
       <ItemList items={items} ></ItemList>
     </div> );
 };
 
 export default ItemListContainer ;
-
-/* .catch((error) => {
-      
-  console.log(error);
-}); */

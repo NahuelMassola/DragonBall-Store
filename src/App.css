@@ -74,7 +74,6 @@
 
 .box-button {
   background: transparent;
-  align-content: center;
   color: white;
   display: inline-block;
   height: 50px;
@@ -103,3 +102,6 @@
 
   /* Fin Botones Card Home */
 
+  .link {
+    text-decoration: none;
+} 

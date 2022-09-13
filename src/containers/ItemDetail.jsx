@@ -1,16 +1,14 @@
 import React from "react";
 import ItemCount from "../components/ItemCount";
 
-
 const ItemDetail = ({item})=> {
-
 
     return (
 
-        <div className="container ">
+        <div className="container vh-100">
             <div className="row">
                 <div className="col-md-6 col-12 text-center">
-                    <img className="img--cardetail" src={"ImagesCard/" + item.imagen} alt={item.nombre} />
+                    <img className="img--cardetail" src={"/ImagesCard/" + item.imagen} alt={item.nombre} />
                 </div>
                 <div className="col-md-6 col-12">
                     <div className="row">

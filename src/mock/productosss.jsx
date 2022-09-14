@@ -1,7 +1,7 @@
 export const productosss = [{
     "id": "1" , 
     "nombre": "Goku" , 
-    "imagen" :"goku.png" , 
+    "imagen" :"Goku.png" , 
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 15000 , 
     "categoria": "figuresZ"

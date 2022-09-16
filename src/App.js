@@ -6,21 +6,24 @@ import ItemDetailContainer from "./containers/ItemDetailContainer";
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import { CartWidget } from "./components/Header/CartWidget";
 import Contact from "./components/Contact/Contact";
+import CustomProvider from "./context/CartContext";
 
 const App = ()  => {
     return (
-            <BrowserRouter>
-                <NavBar />
-                <Title />
-                <Routes>
-                    <Route path="/" element={<ItemListContainer/>} />
-                    <Route path="/contact" element={<Contact/>} />
-                    <Route path="/category/:id" element={<ItemListContainer/>} />
-                    <Route path="/item/:id" element={<ItemDetailContainer/>} />
-                    <Route path="/cart" element={<CartWidget/>} />
-                </Routes>
-                <Footer />
-            </BrowserRouter>
+            <CustomProvider>
+                <BrowserRouter>
+                    <NavBar />
+                    <Title />
+                    <Routes>
+                        <Route path="/" element={<ItemListContainer/>} />
+                        <Route path="/contact" element={<Contact/>} />
+                        <Route path="/category/:id" element={<ItemListContainer/>} />
+                        <Route path="/item/:id" element={<ItemDetailContainer/>} />
+                        <Route path="/cart" element={<CartWidget/>} />
+                    </Routes>
+                    <Footer />
+                </BrowserRouter>
+            </CustomProvider>
     )
 }
 

@@ -16,6 +16,9 @@
 - npm install @emotion/stynled
 - npm install react-bootstrap bootstrap
 
+![Structure](https://github.com/NahuelMassola/DragonBall-Store/blob/main/estructura.jpg)
+
+
 
 Delvoloped by Nahuel Dellace Massola 
 

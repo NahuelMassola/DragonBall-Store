@@ -7,24 +7,32 @@ import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from './CartWidget';
 import { Link } from 'react-router-dom';
+import NavBarOptions from './NavbarOptions';
 
 // Componente NavBar //
 
 const NavBar = () => {
 
+
   return (
     <Navbar bg="dark" expand="lg md sm" variant="dark">
       <Container>
-        <Link className='navbar m-2' to="/" > DragonBall Store</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-          <Link className='navbar m-2' to="/" >Home</Link>
-          <Link className='navbar m-2' to="/contact">Contact</Link>
-            <NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
+            <ul className='navbar'>
+              {NavBarOptions.map(option =>
+                <li key={option.id}>
+                  <Link className='navbari' to={option.link}>{option.nombre}</Link>
+                </li>
+                )}
+            </ul>
+          {/* <Link className='navbar m-2' to="/" >Home</Link>
+          <Link className='navbar m-2' to="/contact">Contact</Link> */}
+            {<NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
               <Link className='link d-flex' to="/category/figuresZ"><strong>Figures Z</strong></Link>
               <Link className='link' to="/category/figuresSuper"><strong>Figures Super</strong></Link>
-            </NavDropdown>
+            </NavDropdown>}
           </Nav>
           <Nav>
             <Link to="/cart"><CartWidget/></Link>

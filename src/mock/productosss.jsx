@@ -4,7 +4,8 @@ export const productosss = [{
     "imagen" :"Goku.png" , 
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 15000 , 
-    "categoria": "figuresZ"
+    "categoria": "figuresZ",
+    "stock" : "5"
 },
 {   
     "id": "2" ,  
@@ -12,7 +13,8 @@ export const productosss = [{
     "imagen" : "Veguetta.png" ,
     "descripcion":" Figura de acción Dragon Ball Z" , 
     "precio": 12500, 
-    "categoria": "figuresZ"
+    "categoria": "figuresZ",
+    "stock" : "5"
 },
 {
     "id": "3" , 
@@ -20,7 +22,8 @@ export const productosss = [{
     "imagen" : "Bills2.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 11500, 
-    "categoria": "figuresSuper"
+    "categoria": "figuresSuper",
+    "stock" : "5"
 },
 {
     "id": "4" , 
@@ -28,7 +31,8 @@ export const productosss = [{
     "imagen" : "VeguettaBlue.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio":14000 ,
-    "categoria": "figuresSuper"
+    "categoria": "figuresSuper",
+    "stock" : "5"
 },
 {
     "id": "5" , 
@@ -36,7 +40,8 @@ export const productosss = [{
     "imagen" : "GokuRose1.png" ,
     "descripcion": "Figura de acción Dragon Ball Super", 
     "precio": 13500, 
-    "categoria":"figuresSuper"
+    "categoria":"figuresSuper",
+    "stock" : "5"
 },
 {
     "id": "6" ,
@@ -44,7 +49,8 @@ export const productosss = [{
     "imagen" : "GokuSS4.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 16000, 
-    "categoria": "figuresZ"
+    "categoria": "figuresZ",
+    "stock" : "5"
 },
 {
     "id": "7" ,
@@ -52,7 +58,8 @@ export const productosss = [{
     "imagen" : "whis.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 14500, 
-    "categoria": "figuresSuper"
+    "categoria": "figuresSuper",
+    "stock" : "5"
 },
 {
     "id": "8" ,
@@ -60,7 +67,8 @@ export const productosss = [{
     "imagen" : "giren.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 17000, 
-    "categoria":"figuresSuper"
+    "categoria":"figuresSuper",
+    "stock" : "5"
 },
 {
     "id": "9" ,
@@ -68,14 +76,16 @@ export const productosss = [{
     "imagen" : "kefla.png" , 
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 18500, 
-    "categoria": "figuresSuper"
+    "categoria": "figuresSuper",
+    "stock" : "5"
 },
 {   "id": "10" ,
     "nombre": "Freezer" , 
     "imagen" : "freezer.png" , 
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 16500, 
-    "categoria": "figuresZ"
+    "categoria": "figuresZ",
+    "stock" : "5"
 },
 {
     "id": "11" ,
@@ -83,7 +93,8 @@ export const productosss = [{
     "imagen" : "gohan.png" , 
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 13500, 
-    "categoria": "figuresZ"
+    "categoria": "figuresZ",
+    "stock" : "5",
 },
 {
     "id": "12" ,
@@ -91,5 +102,6 @@ export const productosss = [{
     "imagen" : "magin boo.png" , 
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 18500, 
-    "categoria": "figuresZ"
+    "categoria": "figuresZ",
+    "stock" : "5"
 }]

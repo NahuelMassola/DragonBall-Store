@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCount from "../components/ItemCount";
 
+
 //Componente Detalle del Producto //
 const ItemDetail = ({item})=> {
 
@@ -22,6 +23,7 @@ const ItemDetail = ({item})=> {
                     <div className="row text-center">
                         <h3>${item.precio}</h3>
                     </div>
+                    <div className="text-center"> <strong>Stock: {item.stock}</strong></div>
                     <ItemCount stock={5} initial={1} onAdd={0} />
                 </div>
             </div>

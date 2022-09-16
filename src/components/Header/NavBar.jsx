@@ -27,8 +27,6 @@ const NavBar = () => {
                 </li>
                 )}
             </ul>
-          {/* <Link className='navbar m-2' to="/" >Home</Link>
-          <Link className='navbar m-2' to="/contact">Contact</Link> */}
             {<NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
               <Link className='link d-flex' to="/category/figuresZ"><strong>Figures Z</strong></Link>
               <Link className='link' to="/category/figuresSuper"><strong>Figures Super</strong></Link>

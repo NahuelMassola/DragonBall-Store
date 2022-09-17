@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React , { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import {Row, Col, Container} from "react-bootstrap"
 import {IoAddCircleOutline, IoRemoveCircleOutline, IoBagAdd,} from "react-icons/io5"
@@ -11,11 +10,11 @@ const ItemCount = (props) => {
     const [count, setCount] = useState(props.initial);
     const [stock , setStock] = useState (props.stock)
 
-
+    
     // funcion sumar contador // 
     const sumar =  () => {
         if  (count < stock) {
-            setCount(count +1) ;
+            setCount(count + 1) ;
         } else {
             Swal.fire(
                 'No puede exceder el Stock disponible!',
@@ -40,7 +39,7 @@ const ItemCount = (props) => {
 
     // funcion Agregar Productos //
     const agregarProductos = () => {
-        if (stock===0) {
+        if (stock === 0) {
             Swal.fire(
                 'Stock Insuficiente!',
                 'Precione Ok para volver!',
@@ -49,6 +48,7 @@ const ItemCount = (props) => {
             setCount(0);
         }
         else if  (count <= stock ) {
+            props.onAdd(count);
             setStock (stock - count);
             Swal.fire(
                 'Agregaste un Producto!',
@@ -57,6 +57,10 @@ const ItemCount = (props) => {
             )
         }
     } ;
+
+    useEffect(() => { 
+        setStock(stock);
+    }, [stock]);
 
     return (
             <Container>

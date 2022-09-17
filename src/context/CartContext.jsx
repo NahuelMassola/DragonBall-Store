@@ -1,42 +1,42 @@
 import React, { useState , useContext , createContext} from "react";
-import { productosss } from "../mock/productosss";
 
-const CartContext = createContext([]);
+export const CartContext = createContext([]);
 
 export const useCartContex = () => useContext(CartContext);
 
 const CustomProvider = ({ children }) => {
     const [ cartItems , setCartItems ] = useState([]);
-    const [ quantity , setQuantity ] = useState(0);
 
     console.log(cartItems);
 
-    const addItem = (item , quantity) => {
-        let newCart;
-        let producto = cartItems.find(productosss => productosss.id === item.id);
-        if (producto) {
-            setQuantity(productosss.quantity += quantity) ;
-            newCart = [...cartItems];
+    // Funcion agregar item //
+
+    const addItem = (item , quantity) => {     
+        if (isInCart(item.id)) {
+            let producto = cartItems.find(x => x.id === item.id)
+            cartItems[cartItems.indexOf(producto)].quantity += quantity
+            setCartItems([...cartItems])
         } else {
-            newCart = [...cartItems , {...item ,quantity: quantity}];
+            setCartItems([...cartItems , {...item, quantity: quantity}])
         }
-        setCartItems(newCart);
     }
+
+    // Funcion eliminar item //
 
     const removeItem = (id) => {
         setCartItems(cartItems.filter((producto) => producto.id !== id))
     }
 
-    const clear = () => {
+    const clear = () => {   
         setCartItems([]);
     }
 
     const isInCart = (id) => {
-        return cartItems.find((producto) => producto.id === id) ? true : false
+        return cartItems.some((producto) => producto.id === id) ? true : false
     }
 
     return (
-        <CartContext.Provider value={{ cartItems , quantity , addItem, removeItem ,clear}}>
+        <CartContext.Provider value={{ cartItems , addItem, removeItem ,clear}}>
             {children}
         </CartContext.Provider>
     )

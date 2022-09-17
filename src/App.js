@@ -2,11 +2,12 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/Header/NavBar";
 import  ItemListContainer from "./containers/ItemListContainer";
 import { Title } from "./components/Title/Title";
-import ItemDetailContainer from "./containers/ItemDetailContainer";
-import { BrowserRouter , Routes , Route } from "react-router-dom";
 import { CartWidget } from "./components/Header/CartWidget";
+import { BrowserRouter , Routes , Route } from "react-router-dom";
+import ItemDetailContainer from "./containers/ItemDetailContainer";
 import Contact from "./components/Contact/Contact";
-import CustomProvider from "./context/CartContext";
+import CustomProvider from "./context/CartContext"; 
+
 
 const App = ()  => {
     return (

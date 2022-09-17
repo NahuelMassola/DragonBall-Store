@@ -5,7 +5,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 15000 , 
     "categoria": "figuresZ",
-    "stock" : "5"
+    "stock" : 6
 },
 {   
     "id": "2" ,  
@@ -14,7 +14,7 @@ export const productosss = [{
     "descripcion":" Figura de acción Dragon Ball Z" , 
     "precio": 12500, 
     "categoria": "figuresZ",
-    "stock" : "5"
+    "stock" : 8
 },
 {
     "id": "3" , 
@@ -23,7 +23,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 11500, 
     "categoria": "figuresSuper",
-    "stock" : "5"
+    "stock" : 11
 },
 {
     "id": "4" , 
@@ -32,7 +32,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio":14000 ,
     "categoria": "figuresSuper",
-    "stock" : "5"
+    "stock" : 3
 },
 {
     "id": "5" , 
@@ -41,7 +41,7 @@ export const productosss = [{
     "descripcion": "Figura de acción Dragon Ball Super", 
     "precio": 13500, 
     "categoria":"figuresSuper",
-    "stock" : "5"
+    "stock" : 2
 },
 {
     "id": "6" ,
@@ -50,7 +50,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 16000, 
     "categoria": "figuresZ",
-    "stock" : "5"
+    "stock" : 0
 },
 {
     "id": "7" ,
@@ -59,7 +59,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 14500, 
     "categoria": "figuresSuper",
-    "stock" : "5"
+    "stock" : 9
 },
 {
     "id": "8" ,
@@ -68,7 +68,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 17000, 
     "categoria":"figuresSuper",
-    "stock" : "5"
+    "stock" : 1
 },
 {
     "id": "9" ,
@@ -77,7 +77,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Super" , 
     "precio": 18500, 
     "categoria": "figuresSuper",
-    "stock" : "5"
+    "stock" : 7
 },
 {   "id": "10" ,
     "nombre": "Freezer" , 
@@ -85,7 +85,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 16500, 
     "categoria": "figuresZ",
-    "stock" : "5"
+    "stock" : 12
 },
 {
     "id": "11" ,
@@ -94,7 +94,7 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 13500, 
     "categoria": "figuresZ",
-    "stock" : "5",
+    "stock" : 10
 },
 {
     "id": "12" ,
@@ -103,5 +103,5 @@ export const productosss = [{
     "descripcion":"Figura de acción Dragon Ball Z" , 
     "precio": 18500, 
     "categoria": "figuresZ",
-    "stock" : "5"
+    "stock" : 8
 }]

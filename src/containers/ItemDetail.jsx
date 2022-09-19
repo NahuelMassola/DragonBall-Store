@@ -53,11 +53,11 @@ const ItemDetail = ({item})=> {
                     { 
                         CartHandler ? 
                         (<>
-                        <ItemCount key={item.id} stock={item.stock} initial={1} onAdd={onAdd} />
+                        
                         <Row>
                             <Col md={7} lg={7} xs={12} className="d-flex justify-content-center my-3"><button className="box-button" onClick={deleteItem}><IoBagRemove size={20}/>DELETE FROM CART</button></Col>
                             <Col md={4} lg={4} xs={12} className="d-flex justify-content-center my-3">
-                                <Link to={`/cart`}><button className="box-button"><IoBagHandle size={20}/> CHECKOUT</button></Link>
+                                <Link to={`/cart`}><button className="box-button"><IoBagHandle size={20}/> TERMINAR COMPRA</button></Link>
                             </Col>
                         </Row>
                         </>

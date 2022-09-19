@@ -8,6 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { CartWidget } from './CartWidget';
 import { Link } from 'react-router-dom';
 import NavBarOptions from './NavbarOptions';
+import categoryOptions from './CategoriesOptions';
 
 // Componente NavBar //
 
@@ -27,10 +28,14 @@ const NavBar = () => {
                 </li>
                 )}
             </ul>
-            {<NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
-              <Link className='link d-flex' to="/category/figuresZ"><strong>Figures Z</strong></Link>
-              <Link className='link' to="/category/figuresSuper"><strong>Figures Super</strong></Link>
-            </NavDropdown>}
+            <NavDropdown className='navbar' title="Catergories" id="basic-nav-dropdown">
+              {
+                categoryOptions.map(option =>
+                  <li key={option.id}>
+                    <Link className='navbari text-dark' to={option.link}>{option.nombre}</Link>
+                  </li>)
+              }
+            </NavDropdown>
           </Nav>
           <Nav>
             <Link to="/cart"><CartWidget/></Link>

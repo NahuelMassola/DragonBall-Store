@@ -35,8 +35,12 @@ const CustomProvider = ({ children }) => {
         return cartItems.some((producto) => producto.id === id) ? true : false
     }
 
+    const cartTotal = () => {
+        return cartItems.reduce((total, item) => total+=item.cantidad, 0);
+    }
+
     return (
-        <CartContext.Provider value={{ cartItems , addItem, removeItem ,clear}}>
+        <CartContext.Provider value={{ cartItems , addItem, removeItem ,clear , cartTotal}}>
             {children}
         </CartContext.Provider>
     )

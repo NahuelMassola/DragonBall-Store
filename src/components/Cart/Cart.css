@@ -1,0 +1,13 @@
+.titulo-cart {
+    text-align: center;
+    padding: 2rem;
+    color: magenta;
+}
+
+.total-cart {
+    color: blueviolet;
+}
+
+.cart-item--img{
+    width: 80px;
+}

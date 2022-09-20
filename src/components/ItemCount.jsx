@@ -17,8 +17,8 @@ const ItemCount = (props) => {
             setCount(count + 1) ;
         } else {
             Swal.fire(
-                'No puede exceder el Stock disponible!',
-                'Precione Ok para volver!',
+                'Can´t exceed the available stock!',
+                'Click Ok to go Back!',
                 'error'
             )
         }
@@ -30,8 +30,8 @@ const ItemCount = (props) => {
             setCount(count -1 );
         } else {
             Swal.fire(
-                'Agregue 1 Producto!',
-                'Precione Ok para volver!',
+                'Can´t add less than 1 product!',
+                'Click OK to go Back!',
                 'error'
             )
         }
@@ -41,8 +41,8 @@ const ItemCount = (props) => {
     const agregarProductos = () => {
         if (stock === 0) {
             Swal.fire(
-                'Stock Insuficiente!',
-                'Precione Ok para volver!',
+                'No Stock!',
+                'Click OK to go Back!',
                 'error'
             )
             setCount(0);
@@ -51,8 +51,8 @@ const ItemCount = (props) => {
             props.onAdd(count);
             setStock (stock - count);
             Swal.fire(
-                'Agregaste un Producto!',
-                '',
+                'You added a product!',
+                'Click OK to Continue',
                 'success'
             )
         }

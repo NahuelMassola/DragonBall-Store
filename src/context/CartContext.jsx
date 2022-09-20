@@ -39,8 +39,12 @@ const CustomProvider = ({ children }) => {
         return cartItems.reduce((total, item) => total+=item.quantity, 0);
     }
 
+    const totalCost = () => {
+        return cartItems.reduce((total, item) => total = total + (item.precio * item.quantity), 0)
+    }
+
     return (
-        <CartContext.Provider value={{ cartItems , addItem, removeItem ,clear , cartTotal}}>
+        <CartContext.Provider value={{ cartItems , addItem, removeItem ,clear , cartTotal , totalCost}}>
             {children}
         </CartContext.Provider>
     )

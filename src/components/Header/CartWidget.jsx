@@ -6,14 +6,22 @@ import {CartContext} from "../../context/CartContext";
 // Componente Cart //
 
 export const CartWidget = () => {
-    const {cartTotal } = useContext(CartContext);
+    const {cartTotal , cartItems} = useContext(CartContext);
 
+    
     return (
-        <div>
+        <div> 
+            {
+            cartItems.length === 0 ? (
+            <></>
+            ) : (
                 <button type="button" className="btn position-relative" title="Ir al Carrito">
                     <ShoppingCartIcon color="primary"/>
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cartTotal()}</span>
                 </button>
-        </div>
+            )}
+        </div> 
     )
 }
+
+

@@ -36,7 +36,7 @@ const CustomProvider = ({ children }) => {
     }
 
     const cartTotal = () => {
-        return cartItems.reduce((total, item) => total+=item.cantidad, 0);
+        return cartItems.reduce((total, item) => total+=item.quantity, 0);
     }
 
     return (

@@ -2,7 +2,7 @@ import Footer from "./components/Footer/Footer";
 import NavBar from "./components/Header/NavBar";
 import  ItemListContainer from "./containers/ItemListContainer";
 import { Title } from "./components/Title/Title";
-import { CartWidget } from "./components/Header/CartWidget";
+import Cart from './components/Cart/Cart';
 import { BrowserRouter , Routes , Route } from "react-router-dom";
 import ItemDetailContainer from "./containers/ItemDetailContainer";
 import Contact from "./components/Contact/Contact";
@@ -20,7 +20,7 @@ const App = ()  => {
                         <Route path="/contact" element={<Contact/>} />
                         <Route path="/category/:id" element={<ItemListContainer/>} />
                         <Route path="/item/:id" element={<ItemDetailContainer/>} />
-                        <Route path="/cart" element={<CartWidget/>} />
+                        <Route path="/cart" element={<Cart/>} />
                     </Routes>
                     <Footer />
                 </BrowserRouter>

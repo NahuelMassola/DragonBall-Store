@@ -59,6 +59,11 @@ const ItemDetail = ({item})=> {
                                 <Link to={`/cart`}><button className="box-button"><IoBagHandle size={20}/> CHECKOUT</button></Link>
                             </Col>
                         </Row>
+                        <Row>
+                            <Col className="text-center">
+                                <Link to={"/"}><button className="box-button mt-3 text-dark"><strong>GO SHOPPING</strong></button></Link>
+                                </Col>
+                        </Row>
                         </>
                         ) 
                         : (<ItemCount key={item.id} stock={item.stock} initial={1} onAdd={onAdd} />) 

@@ -1,38 +1,24 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList"
 import { useParams } from "react-router-dom";
-import {  productosss } from "../mock/productosss";
 import Loader from "../components/Loader"
+import { getFirestore , collection , getDocs, query, where } from "firebase/firestore"
 
 // Componente Contenedor de Lista del producto //
 const ItemListContainer = () => {
   const [items , setItems] = useState([]); 
   const [loading , setLoading] = useState(true)
   const [ error , setError] = useState(false)
-  const {id} = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    const getItem = new Promise((resolve) => {
-      setTimeout(() => {
-      resolve(productosss);
-    }, 1000);
-  }); 
-
-    if (id) {
-      getItem.then((respuesta) => {
-        setItems(respuesta.filter(productosss => productosss.categoria === id));
-      })
-    } else {
-      getItem.then((respuesta) => {
-        setItems(respuesta);  
-      })
-      .catch (() => {
-        setError(true)
-      })
-      .finally (() =>{
-        setLoading(false)
-      })
-    }
+    const db = getFirestore();
+    const itemCollection = collection( db , "items");
+    const queryItems = id ? query(itemCollection , where("categoria", "==" , id)) : itemCollection
+      getDocs(queryItems).then((snapShot) => {
+        setItems(snapShot.docs.map(( item ) => ({ id : item.id , ...item.data() })));
+        setLoading(false);
+  });
   }, [id]) ;
 
   return (

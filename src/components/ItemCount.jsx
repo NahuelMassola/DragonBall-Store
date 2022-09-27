@@ -45,7 +45,6 @@ const ItemCount = (props) => {
                 'Click OK to go Back!',
                 'error'
             )
-            setCount(0);
         }
         else if  (count <= stock ) {
             props.onAdd(count);

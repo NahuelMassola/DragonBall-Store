@@ -1,8 +1,8 @@
 import React, { useState , useEffect } from "react";
 import ItemDetail from "./ItemDetail";
-import { productosss } from "../mock/productosss";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
+import { getFirestore , doc , getDoc } from "firebase/firestore"
 
 //Componente contenedor del Detalle del Producto //
 const ItemDetailContainer = () => {
@@ -12,18 +12,15 @@ const ItemDetailContainer = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const getProducto = new Promise((resolve) => {
-            setTimeout(() => {
-            resolve(productosss);
-            } , 1000);
-        }); 
-            getProducto.then(respuesta => setItems(respuesta.find (productosss => productosss.id === id))) 
-            .catch (() => {
-                setError(true)
-            })
-            .finally (() =>{
-                setLoading(false)
-            })
+        const db = getFirestore();
+        const respuesta = doc( db , "items" , `${id}` );
+            getDoc(respuesta).then((snapShot) => {
+                if (snapShot.exists()) {
+                    setItems({id:snapShot.id, ...snapShot.data()});
+                    setLoading(false);
+                setError()
+                }
+            });
     },[id] );
 
     return (
@@ -33,7 +30,7 @@ const ItemDetailContainer = () => {
         <Loader />
         ) : (
             error ? (
-            <h1>We're sorry, something went wrong...</h1>) : (<ItemDetail item={items} />
+            <h1>We're sorry, something went wrong...</h1>) : (<div className="vh-100"><ItemDetail item={items} /></div>
         ))}
         </div> 
     );

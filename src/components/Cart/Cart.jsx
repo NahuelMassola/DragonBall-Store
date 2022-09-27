@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import "./Cart.css"
 import {MdRemoveShoppingCart} from "react-icons/md"
+import {IoAddCircleOutline, IoRemoveCircleOutline } from "react-icons/io5"
 
 const Cart = () => {
 
+    
+
     const { cartItems , removeItem , clear , cartTotal , totalCost } = useContext(CartContext);
-    console.log(cartItems);
+    
 
     if (cartItems.length === 0 ) {
     return (
@@ -32,7 +35,7 @@ const Cart = () => {
                     <Col>
                         {
                             cartItems.map(item => (
-                                <Row key={item.id}>
+                                <Row key={item.id} className="text-center">
                                     <Col md={2} xs={6}>
                                         <button className="box-button mt-3" onClick={ ()=> removeItem(item.id) }><MdRemoveShoppingCart size={20} color="black"/></button>
                                     </Col>
@@ -40,10 +43,14 @@ const Cart = () => {
                                         <img src={"/ImagesCard/" + item.imagen} className="cart-item--img" alt="" />
                                     </Col>
                                     <Col md={8} xs={12} className="d-flex align-items-center">
-                                        <Col md={9} xs={10}>
-                                            <h4>{item.quantity} x {item.nombre}</h4>
+                                        <Col md={6} xs={6}>
+                                            <h4>{item.quantity} x {item.nombre} Action Figure</h4>
                                         </Col>
-                                        <Col md={3} xs={2} className="d-flex justify-content-start">
+                                        <Col md={3} xs={4}>
+                                            {/* <button className='box-button' onClick={restar}><IoRemoveCircleOutline size={20}/></button>
+                                            <button className='box-button' onClick={sumar}><IoAddCircleOutline size={20}/></button> */}
+                                        </Col>
+                                        <Col md={3} xs={2} className="d-flex">
                                             <h4>$ {item.precio}</h4>
                                         </Col>
                                     </Col>
@@ -52,9 +59,9 @@ const Cart = () => {
                         }
                     </Col>
                 </Row>
-                <Row className="d-flex justify-content-center my-5">
-                    <Col md={4} xs={4} className="d-flex align-items-center justify-content-start"><button className="cart-item--remove box-button text-dark" onClick={ ()=> clear() }><MdRemoveShoppingCart color="black" size={20}/> All</button> </Col>
-                    <Col md={4} xs={4} className="d-flex justify-content-start">
+                <Row className="my-5">
+                    <Col md={4} xs={4} className="text-center"><button className="cart-item--remove box-button text-dark" onClick={ ()=> clear() }><MdRemoveShoppingCart color="black" size={20}/> All</button> </Col>
+                    <Col md={4} xs={4} className="text-center">
                         <h3 className="total-cart">Products: x {cartTotal()}</h3>
                     </Col>
                     <Col md={4} xs={4}>
@@ -62,9 +69,12 @@ const Cart = () => {
                     </Col>
                 </Row>
                 <Row className="text-center my-5">
-                    <Col md={12} xs={12}>
-                        <Link to=""><button className="box-button text-dark"><strong>CHECKOUT</strong></button></Link>
-                        </Col>
+                    <Col md={6} xs={12}>
+                        <Link to={"/"}><button className="box-button text-dark"><strong>GO SHOPPING</strong></button></Link>
+                    </Col>
+                    <Col md={6} xs={12}>
+                    <Link to=""><button className="box-button text-dark"><strong>CHECKOUT</strong></button></Link>
+                    </Col>
                 </Row>
             </Container>
         )

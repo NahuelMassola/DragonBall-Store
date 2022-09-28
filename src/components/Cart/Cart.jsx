@@ -23,7 +23,7 @@ const Cart = () => {
         </Container>
     )} else {
         return (
-            <Container>
+            <Container className="vh-100">
                 <Row>
                     <Col md={12} lg={12}>
                         <h1 className="titulo-cart">CART</h1>
@@ -64,10 +64,10 @@ const Cart = () => {
                 </Row>
                 <Row className="text-center my-5">
                     <Col md={6} xs={12}>
-                        <Link to={"/"}><button className="box-button text-dark"><strong>GO SHOPPING</strong></button></Link>
+                        <Link to={"/"}><button className="box-button text-dark mt-1"><strong>GO SHOPPING</strong></button></Link>
                     </Col>
                     <Col md={6} xs={12}>
-                        <Link to="/success"><button className="box-button text-dark"><strong>CHECKOUT</strong></button></Link>
+                        <Link to="/success"><button className="box-button text-dark mt-1"><strong>CHECKOUT</strong></button></Link>
                     </Col>
                 </Row>
             </Container>

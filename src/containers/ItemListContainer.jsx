@@ -18,6 +18,7 @@ const ItemListContainer = () => {
       getDocs(queryItems).then((snapShot) => {
         setItems(snapShot.docs.map(( item ) => ({ id : item.id , ...item.data() })));
         setLoading(false);
+        setError();
   });
   }, [id]) ;
 

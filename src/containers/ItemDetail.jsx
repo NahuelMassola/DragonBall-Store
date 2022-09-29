@@ -13,7 +13,6 @@ const ItemDetail = ({item})=> {
     const [CartHandler , setCartHandler ] = useState(false)
     const {addItem , removeItem } = useContext(CartContext);
     
-    
     const onAdd = (quantityToAdd) => {
         setCartHandler(true);
         Swal.fire(

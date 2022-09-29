@@ -11,10 +11,7 @@ import NavBarOptions from './NavbarOptions';
 import categoryOptions from './CategoriesOptions';
 
 // Componente NavBar //
-
 const NavBar = () => {
-
-
   return (
     <Navbar className='navbar2' bg="dark" expand="lg md sm" variant="dark">
       <Container>

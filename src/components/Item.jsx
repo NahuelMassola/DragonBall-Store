@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Componente Item //
-
 const Item = ({id, nombre , precio, imagen }) => {
     return (
             <div className="card align-items-center img--card ">

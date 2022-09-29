@@ -5,7 +5,7 @@ import { CartContext } from "../../context/CartContext";
 import {MdRemoveShoppingCart} from "react-icons/md"
 import "./Cart.css"
 
-
+// Componente Carrito //
 const Cart = () => {
     const { cartItems , removeItem , clear , cartTotal , totalCost } = useContext(CartContext);
     

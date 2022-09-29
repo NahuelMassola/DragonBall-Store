@@ -20,6 +20,7 @@ const Form = () => {
     const handleTelefono = (e) => setTelefono(e.target.value);
     const handleEmail = (e) => setEmail(e.target.value);
 
+    // confirmacion de compra //
     const confirmCheckout = (e) => { e.preventDefault();
         const order = {
             buyer: { nombre , apellido , telefono , email },

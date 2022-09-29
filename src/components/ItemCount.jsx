@@ -3,14 +3,11 @@ import Swal from "sweetalert2";
 import {Row, Col, Container} from "react-bootstrap"
 import {IoAddCircleOutline, IoRemoveCircleOutline, IoBagAdd,} from "react-icons/io5"
 
-
 // Componente Contador //
-
 const ItemCount = (props) => {
     const [count, setCount] = useState(props.initial);
     const [stock , setStock] = useState (props.stock)
 
-    
     // funcion sumar contador // 
     const sumar =  () => {
         if  (count < stock) {

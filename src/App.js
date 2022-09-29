@@ -9,8 +9,6 @@ import Contact from "./components/Contact/Contact";
 import CustomProvider from "./context/CartContext"; 
 import Form from "./components/Form/Form";
 
-
-
 const App = ()  => {
     return (
             <CustomProvider>
@@ -30,5 +28,4 @@ const App = ()  => {
             </CustomProvider>
     )
 }
-
 export default App;

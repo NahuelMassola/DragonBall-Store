@@ -1,4 +1,4 @@
-import { addDoc, collection, getFirestore, serverTimestamp  } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getFirestore, serverTimestamp, updateDoc  } from "firebase/firestore";
 import { useContext, useState } from "react";
 import { Row , Col, Container } from "react-bootstrap";
 import { CartContext } from "../../context/CartContext";
@@ -42,6 +42,19 @@ const Form = () => {
                 icon: 'success'
                 })
         })
+        .then(
+            cartItems.forEach( element => {
+                const PurchasedQuantity = element.quantity
+                const updateCollection = doc( db,"items", `${element.id}`)
+                getDoc(updateCollection)
+                .then( res => {
+                    const updatedStock = res.data().stock - PurchasedQuantity
+                    updateDoc(updateCollection, {"stock": updatedStock})
+                }
+                )
+            }                  
+        )
+    )
         clear();
     }
 

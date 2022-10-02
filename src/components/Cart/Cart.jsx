@@ -34,17 +34,17 @@ const Cart = () => {
                         {
                             cartItems.map(item => (
                                 <Row key={item.id} className="text-center">
-                                    <Col md={2} xs={6}>
+                                    <Col md={2} xs={2}>
                                         <button className="box-button mt-3" onClick={ ()=> removeItem(item.id) }><MdRemoveShoppingCart size={20} color="black"/></button>
                                     </Col>
-                                    <Col md={2} xs={6} className=" justify-content-end justify-content-md-center">
+                                    <Col md={2} xs={2} className=" justify-content-end justify-content-md-center">
                                         <img src={"/ImagesCard/" + item.imagen} className="cart-item--img" alt="" />
                                     </Col>
-                                    <Col md={8} xs={12} className="d-flex align-items-center">
+                                    <Col md={8} xs={8} className="d-flex align-items-center">
                                         <Col md={6} xs={6}>
                                             <h4>{item.quantity} x {item.nombre} Action Figure</h4>
                                         </Col>
-                                        <Col md={6} xs={2} className="">
+                                        <Col md={6} xs={6} className="">
                                             <h4>$ {item.precio}</h4>
                                         </Col>
                                     </Col>

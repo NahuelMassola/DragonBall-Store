@@ -43,7 +43,6 @@ const CustomProvider = ({ children }) => {
             {children}
         </CartContext.Provider>
     )
-
 }
 
 export default CustomProvider ;

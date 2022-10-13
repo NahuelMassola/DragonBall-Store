@@ -44,23 +44,23 @@ const Contact = () => {
     }
 
     return (
-        <Container className="vh-100">
+        <Container>
             <Row>
                 <Col md={6} sm={6}>
-                    <h3 className="text-center mt-3">LOCATION PROVIDED BY GOOGLE</h3>
+                    <h3 className="text-center mt-3">LOCATION BY GOOGLE</h3>
                     <img className="img-map" src="./ImagesCard/Maps.png" alt="iamgen mapa"></img>
-                    <Col className="d-flex justify-content-center mt-3">
+                    <Col className="d-flex justify-content-center my-3">
                         <Link to={"/"}><button className="box-button"><strong>GO SHOPPING</strong></button></Link>
                     </Col>
                 </Col>
                 <Col md={6} sm={6}>
-                <Col className="text-center mt-3"><h3>LEAVE US YOUR MESSAGE</h3></Col>
+                <Col className="text-center mt-3 mb-3"><h3>LEAVE US YOUR MESSAGE</h3></Col>
                     <form action="" className="form" onSubmit={confirmCheckout}>
                         <input className="form-control text-center mt-3" required type="text" value={nombre} placeholder="Name" onChange={handleNombre}/>
                         <input className="form-control text-center mt-3" required type="text" value={email} placeholder="Email" onChange={handleEmail}/>
                         <input className="form-control text-center mt-3" required dftype="number" value={telefono} placeholder="Phone" onChange={handleTelefono}/>
                         <input className="form--control text-center" required dftype="text" value={mensaje} placeholder="Message" onChange={handleMensaje}/>
-                        <Col className="d-flex justify-content-center mt-3">
+                        <Col className="btn-send">
                             <button className="box-button ">
                             <span className="text-cyan">Send Message</span></button>
                         </Col>

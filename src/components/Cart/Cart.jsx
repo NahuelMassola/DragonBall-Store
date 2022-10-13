@@ -67,7 +67,7 @@ const Cart = () => {
                         <Link to={"/"}><button className="box-button text-dark mt-1"><strong>GO SHOPPING</strong></button></Link>
                     </Col>
                     <Col md={6} xs={12}>
-                        <Link to="/form"><button className="box-button text-dark mt-1"><strong>CHECKOUT</strong></button></Link>
+                        <Link to="/form"><button className="box-button text-dark mt-1 mb-5"><strong>CHECKOUT</strong></button></Link>
                     </Col>
                 </Row>
             </Container>

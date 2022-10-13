@@ -65,7 +65,7 @@ const ItemCount = (props) => {
                         <button className='box-button' onClick={agregarProductos}><IoBagAdd size={20}/> ADD TO CART</button>
                     </Col>
                     <Col xs={12} className="d-flex justify-content-center mt-2">                       <button className='box-button' onClick={restar}><IoRemoveCircleOutline size={20}/></button>
-                        <button className='box-button'>{count}</button>
+                        <button className='box-button mb-5'>{count}</button>
                         <button className='box-button' onClick={sumar}><IoAddCircleOutline size={20}/></button>
                     </Col>
                 </Row>

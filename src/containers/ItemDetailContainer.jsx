@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
         <Loader />
         ) : (
             error ? (
-            <h1>We're sorry, something went wrong...</h1>) : (<div className="vh-100"><ItemDetail item={items} /></div>
+            <h1>We're sorry, something went wrong...</h1>) : (<div><ItemDetail item={items} /></div>
         ))}
         </div> 
     );

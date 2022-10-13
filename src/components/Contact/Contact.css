@@ -10,3 +10,10 @@
     margin-top: 0.5rem;
     height: 380px;
 }
+
+.btn-send {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+}

@@ -32,7 +32,7 @@ const ItemDetail = ({item})=> {
     return (
         <>
         <Container className="d-flex justify-content-center py-5">
-            <Row className=" outer">
+            <Row className="outer">
                 <Col md={6} sm={12} className="text-center">
                     <img className="img--cardetail" src={"/ImagesCard/" + item.imagen} alt={item.nombre} />
                 </Col>
@@ -60,7 +60,7 @@ const ItemDetail = ({item})=> {
                         </Row>
                         <Row>
                             <Col className="text-center">
-                                <Link to={"/"}><button className="box-button mt-3 text-dark"><strong>GO SHOPPING</strong></button></Link>
+                                <Link to={"/"}><button className="box-button mt-3 mb-5 text-dark"><strong>GO SHOPPING</strong></button></Link>
                                 </Col>
                         </Row>
                         </>

@@ -112,6 +112,7 @@
   box-shadow: 
   inset 0 0 10px #fff , 0 0 10px #fff,
   inset 0 0 25px #0ff , 0 0 25px #0ff;
+  margin-bottom: 160px;
 }
 
 @media (max-width: 605px){
